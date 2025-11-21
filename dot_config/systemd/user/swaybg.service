@@ -1,0 +1,9 @@
+[Unit]
+Description=Set wallpaper for Sway
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swaybg -m fill -i "%h/Pictures/Wallpapers/night_cityscape.jpg"
+Restart=on-failure
+

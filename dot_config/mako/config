@@ -1,0 +1,27 @@
+sort=-time
+layer=overlay
+background-color=#2a2c3e
+width=350
+height=130
+border-size=2
+border-color=#7aa2f7
+border-radius=3
+icons=0
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
+font=CommitMono Nerd Font 11
+
+[urgency=low]
+border-color=#565f89
+
+[urgency=normal]
+border-color=#d7a65f
+
+[urgency=high]
+border-color=#f7768e
+
+[category=mpd]
+default-timeout=2000
+group-by=category
+
