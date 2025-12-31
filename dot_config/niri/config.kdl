@@ -68,6 +68,10 @@ window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
+window-rule {
+    match app-id=r#"floorp$"# title="^Picture-in-Picture$"
+    open-floating true
+}
 
 // Window rule for general apps
 window-rule {
@@ -81,11 +85,12 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
-    Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "swaylock -f && niri msg action power-off-monitors"; }
+    Mod+Return hotkey-overlay-title="Open a Foot Terminal" { spawn "foot"; }
+    Mod+Space hotkey-overlay-title="Run the Fuzzel Launcher" { spawn "fuzzel"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "swaylock -f && niri msg action power-off-monitors"; }
+    Super+Alt+S hotkey-overlay-title="Lock & Suspend" { spawn-sh "swaylock -f && systemctl suspend"; }
 
-    Mod+B hotkey-overlay-title="Open a browser: floorp" { spawn "floorp"; }
+    Mod+B hotkey-overlay-title="Open a Floorp Browser" { spawn "floorp"; }
 
     // Binds for function keys
     // Volume
@@ -99,8 +104,7 @@ binds {
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
 
     // To mirror screen with wl-mirror
-    // TODO: make a .sh script to kill the existing pipe also
-    XF86Display allow-when-locked=true { spawn "wl-present" "mirror" "eDP-1" "--fullscreen-output" "HDMI-A-1" "--fullscreen" "--scaling" "fit"; }
+    XF86Display allow-when-locked=true repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
