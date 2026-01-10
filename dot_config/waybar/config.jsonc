@@ -1,0 +1,137 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": [
+    "niri/workspaces",
+    "niri/window",
+    "mpris"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "backlight",
+    "pulseaudio",
+    "network",
+    "bluetooth",
+    "tray"
+  ],
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      // Icons by state
+      "active": "",
+      "default": ""
+    }
+  },
+  "niri/window": {
+    "format": "{app_id}",
+    "max-length": 8,
+    "justify": "center"
+  },
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "format-paused": "{status_icon} {title}",
+    "player-icons": {
+      "default": "▶"
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
+    "max-length": 20
+  },
+  "tray": {
+    "icon-size": 13,
+    "spacing": 15,
+    "hide-empty": true
+  },
+  "clock": {
+    "format": "{:%H:%M • %a %d %b}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "timezone": "Asia/Jakarta"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": "{capacity}%",
+    // "format-alt": "{icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon}{volume}%",
+    "format-muted": " ",
+    "format-icons": {
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-disconnected": " Disconnected",
+    "tooltip-format": "Not connected",
+    "tooltip-format-wifi": "Connected to {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}",
+    "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}",
+    "on-click": "pkill nm-applet || nm-applet &"
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "max-length": 12,
+    "on-click": "blueman-manager"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󱩎",
+      "󱩏",
+      "󱩐",
+      "󱩑",
+      "󱩒",
+      "󱩓",
+      "󱩔",
+      "󱩕",
+      "󱩖",
+      "󰛨"
+    ]
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true
+  },
+  "memory": {
+    "format": " {percentage}%",
+    "tooltip": true
+  },
+  "temperature": {
+    "format": "󰔐 {temperatureC}°C",
+    "tooltip": true,
+    "critical-threshold": 80
+  }
+}
