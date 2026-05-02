@@ -1,0 +1,17 @@
+// this is the default config minus the comments
+// of what's possible
+input {
+    keyboard {
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+}
+
+// comment this out if you have different outputs
+output "HDMI-A-1" {
+    mode "1920x1080@100.087"
+}
