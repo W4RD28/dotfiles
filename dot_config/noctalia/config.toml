@@ -500,7 +500,7 @@ album_art_only = true
 
 [widget.active_window]
 min_length = 0
-max_length = 700
+max_length = 500
 title_scroll = "on_hover"
 display = "icon_and_text"
 
