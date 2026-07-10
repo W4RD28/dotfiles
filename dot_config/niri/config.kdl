@@ -3,3 +3,5 @@ include "keybinds.kdl"
 include "layout.kdl"
 include "startup.kdl"
 include "window-rule.kdl"
+
+include "noctalia.kdl"

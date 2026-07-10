@@ -12,10 +12,32 @@ window-rule {
     open-floating true
 }
 
-// Window rule for general apps
 window-rule {
-    geometry-corner-radius 1
-    clip-to-geometry true
+  // Rounded corners for a modern look.
+  geometry-corner-radius 6
+
+  // Clips window contents to the rounded corner boundaries.
+  clip-to-geometry true
 }
+
+// Floating Noctalia settings window.
+window-rule {
+  match app-id="dev.noctalia.Noctalia"
+  open-floating true
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 920; }
+}
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}
+
 // To make the top bar dissapear
 prefer-no-csd
+
+// Place the regular wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-backdrop"
+  place-within-backdrop true
+}
