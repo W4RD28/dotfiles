@@ -246,12 +246,12 @@ address     = ""                     # e.g. "Toronto, ON"; geocoded when auto_lo
 # pre_action_fade_seconds = 2.0
 
 [idle.behavior.lock]
-timeout = 600
+timeout = 300
 command = "noctalia:session lock"
 enabled = true
 
 [idle.behavior.screen-off]
-timeout = 660
+timeout = 301
 command = "noctalia:dpms-off"
 resume_command = "noctalia:dpms-on"
 enabled = true
