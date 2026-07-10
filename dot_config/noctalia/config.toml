@@ -517,3 +517,5 @@ display_mode = "graphic"
 show_label = false
 warning_threshold = 20
 
+[widget.brightness]
+show_label = false
