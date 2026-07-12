@@ -301,18 +301,24 @@ end    = [
 
   "spacer",
 
-  "tray",
-  "clock",
-  "weather",
-
-  "spacer",
-
   "network",
   "bluetooth",
   "volume",
   "brightness",
   "battery",
-  "session"
+
+  "spacer",
+
+  "tray",
+  "weather",
+
+  "spacer",
+
+  "clock",
+
+  "spacer",
+
+  "session",
 ]
 
 # Commands for the bar margin outside widget sections (dead zone):
@@ -485,7 +491,7 @@ battery_low_percent_threshold = 20   # set to e.g. 20 to enable battery_under_th
 # scroll_down_command = ""
 #
 [widget.clock]
-format = "{:%H:%M}"
+format = "{:%a %H:%M}"
 # vertical_format = "{:%H\n%M}"
 tooltip_format = "{:%A, %B %d, %Y}"
 # scale = 1.0                         # multiplies the bar scale for this widget only
