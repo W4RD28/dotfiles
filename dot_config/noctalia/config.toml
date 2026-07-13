@@ -61,6 +61,9 @@ open_near_click_session        = false # for attached/floating placement, follow
 [shell.mpris]
 blacklist = []                      # ignore MPRIS players by bus/identity/desktop entry token
 
+[shell.greeter_sync]
+auto_sync = true
+
 # ── Wallpaper ─────────────────────────────────────────────────────────────────
 
 [wallpaper]
