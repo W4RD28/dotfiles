@@ -250,14 +250,14 @@ address     = ""                     # e.g. "Toronto, ON"; geocoded when auto_lo
 
 [idle.behavior.lock]
 timeout = 300
-command = "noctalia:session lock"
+command = "noctalia msg session lock && niri msg action power-off-monitors"
 enabled = true
 
-[idle.behavior.screen-off]
-timeout = 301
-command = "noctalia:dpms-off"
-resume_command = "noctalia:dpms-on"
-enabled = true
+# [idle.behavior.screen-off]
+# timeout = 301
+# command = "noctalia:dpms-off"
+# resume_command = "noctalia:dpms-on"
+# enabled = true
 
 # ── Keybinds ──────────────────────────────────────────────────────────────────
 
