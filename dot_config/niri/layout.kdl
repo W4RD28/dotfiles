@@ -9,27 +9,6 @@ layout {
     }
 
     default-column-width { proportion 0.5; }
-
-    focus-ring {
-        width 3
-        active-color "#7dcfff"
-        inactive-color "#414868"
-    }
-
-    border {
-        off
-        width 2
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
-    }
-
-    shadow {
-        softness 30
-        spread 5
-        offset x=0 y=1
-        color "#0007"
-    }
 }
 
 animations { }
