@@ -5,7 +5,7 @@
 # ── Shell ─────────────────────────────────────────────────────────────────────
 
 [shell]
-ui_scale              = 1.0
+# ui_scale              = 1.0
 corner_radius_scale   = 0          # 0 = square, 1 = default, 2 = extra rounded
 font_family           = "CommitMono Nerd Font"
 time_format           = "{:%H:%M}"  # default shell UI time format
@@ -16,7 +16,7 @@ niri_overview_type_to_launch_enabled = false # opt in to type-to-launch from nir
 polkit_agent          = true
 password_style        = "default"    # default | random
 settings_show_advanced = false       # show advanced settings by default in Settings
-middle_click_opens_widget_settings = true # middle-click bar widgets to open their Settings entry
+# middle_click_opens_widget_settings = true # middle-click bar widgets to open their Settings entry
 show_location         = true         # hide weather location text in shell UI when false
 # app_icon_colorize   = false        # recolor application icons across the shell
 # app_icon_color      = "on_surface" # ColorSpec role or #hex when colorize is enabled
@@ -47,8 +47,8 @@ alpha     = 0.55                    # multiplied by each component's background 
 transparency_mode     = "solid"     # solid | soft | glass; controls floating/centered opacity and card translucency
 borders               = true        # panel shell outline and in-panel section cards
 shadow                = true        # cast the global [shell.shadow] from panel surfaces
-launcher_placement       = "centered" # attached | floating | centered
-clipboard_placement      = "centered" # attached | floating | centered
+launcher_placement       = "floating" # attached | floating 
+clipboard_placement      = "floating" # attached | floating 
 control_center_placement = "attached" # attached | floating | centered
 wallpaper_placement      = "attached" # attached | floating | centered
 session_placement        = "attached" # attached | floating | centered
@@ -83,7 +83,7 @@ path = ""                            # optional initial/default wallpaper path
 
 [wallpaper.automation]
 enabled                    = false
-interval_minutes           = 0       # 0 = disabled
+# interval_minutes           = 0       # 0 = disabled
 order                      = "random" # random | alphabetical
 recursive                  = true    # include subdirectories when picking random wallpapers
 
@@ -278,8 +278,6 @@ position           = "top"          # top | bottom | left | right
 thickness          = 34
 background_opacity = 1.0
 radius             = 12
-margin_h           = 180
-margin_v           = 10
 margin_ends        = 10
 margin_edge        = 5
 padding            = 14
@@ -354,8 +352,8 @@ radius_top_left     = 16
 radius_top_right    = 16
 radius_bottom_left  = 16
 radius_bottom_right = 16
-margin_h            = 0
-margin_v            = 8
+# margin_h            = 0
+# margin_v            = 8
 shadow              = true
 show_running        = true
 auto_hide           = false
@@ -436,7 +434,7 @@ enabled = false
 # ── Hooks ─────────────────────────────────────────────────────────────────────
 
 [hooks]
-battery_low_percent_threshold = 20   # set to e.g. 20 to enable battery_under_threshold hook
+# battery_low_percent_threshold = 20   # set to e.g. 20 to enable battery_under_threshold hook
 
 # started           = "notify-send 'Noctalia' 'Shell started'"
 # wallpaper_changed = []
@@ -524,7 +522,7 @@ show_label = false
 type = "battery"
 display_mode = "graphic"
 show_label = false
-warning_threshold = 20
+# warning_threshold = 20
 
 [widget.brightness]
 show_label = false
