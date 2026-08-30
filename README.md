@@ -3,6 +3,10 @@
 
 My personal dotfiles managed with **chezmoi**, configured for an Arch Linux + Niri + Noctalia setup.
 
+![Clean Desktop](https://i.postimg.cc/CxsVdFqR/Screenshot-from-2026-08-30-21-43-31.png)
+![Steam Tiling Workspace](https://i.postimg.cc/B6v7S3xM/Screenshot-from-2026-08-30-21-43-25.png)
+![Browser and Terminal](https://i.postimg.cc/YCWH76pN/Screenshot-from-2026-08-30-21-43-20.png)
+
 ---
 
 ## 🖥️ Environment
