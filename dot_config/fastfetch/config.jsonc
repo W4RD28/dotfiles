@@ -9,7 +9,12 @@
     "uptime",
     "packages",
     "shell",
-    "display",
+    // "display",
+    {
+      "type": "display",
+      "key": "Display",
+      "format": "{1}x{2} @ {3}Hz"
+    },
     "de",
     "wm",
     "wmtheme",
@@ -23,7 +28,12 @@
     "gpu",
     "memory",
     "swap",
-    "disk",
+    // "disk",
+    {
+      "type": "disk",
+      "key": "Disk (Total)",
+      "format": "{1} / {2} ({3})"
+    },
     "localip",
     "battery",
     "poweradapter",
